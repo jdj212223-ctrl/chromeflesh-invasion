@@ -21,5 +21,6 @@
   "chromeflesh_invasion.purged_self": "💉 Infection purged",
   "chromeflesh_invasion.hud.override": "OVERRIDE IN PROGRESS",
   "chromeflesh_invasion.hud.override_help": "Ask a friend for a Purge Shot... or wait for your system to fight back",
-  "chromeflesh_invasion.hud.infection": "Infection %s%%"
+  "chromeflesh_invasion.hud.infection": "Infection %s%%",
+  "subtitles.chromeflesh_invasion.override": "Invasion music plays"
 }

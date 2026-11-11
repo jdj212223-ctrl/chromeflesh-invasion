@@ -6,7 +6,7 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 public final class InvasionConfig {
     public static final ModConfigSpec SPEC;
     public static final ModConfigSpec.IntValue INVASION_DAY, CORRUPTED_MINUTES, MAX_ANDROIDS;
-    public static final ModConfigSpec.BooleanValue INVASION, INFECTION, GRIEFING;
+    public static final ModConfigSpec.BooleanValue INVASION, INFECTION, GRIEFING, MUSIC;
 
     static {
         ModConfigSpec.Builder b = new ModConfigSpec.Builder();
@@ -17,6 +17,7 @@ public final class InvasionConfig {
                 .defineInRange("corruptedMinutes", 15, 1, 600);
         MAX_ANDROIDS = b.comment("At most this many androids near each player at night").defineInRange("maxAndroids", 12, 0, 64);
         GRIEFING = b.comment("Androids corrupt the grass and dirt they walk on").define("griefing", true);
+        MUSIC = b.comment("Play the invasion theme at the breach and when each invasion night falls").define("music", true);
         SPEC = b.build();
     }
 

@@ -10,5 +10,14 @@
       "chromeflesh_invasion:glitch"
     ],
     "subtitle": "subtitles.chromeflesh_invasion.glitch"
+  },
+  "override": {
+    "sounds": [
+      {
+        "name": "chromeflesh_invasion:override",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.chromeflesh_invasion.override"
   }
 }

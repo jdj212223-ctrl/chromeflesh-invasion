@@ -21,5 +21,6 @@
   "chromeflesh_invasion.purged_self": "💉 Nákaza vyčištěna",
   "chromeflesh_invasion.hud.override": "PROBÍHÁ PŘEPIS",
   "chromeflesh_invasion.hud.override_help": "Popros kamaráda o očistnou injekci... nebo počkej, až se tvůj systém ubrání",
-  "chromeflesh_invasion.hud.infection": "Nákaza %s%%"
+  "chromeflesh_invasion.hud.infection": "Nákaza %s%%",
+  "subtitles.chromeflesh_invasion.override": "Hraje hudba invaze"
 }

@@ -91,7 +91,7 @@ public final class Invasion {
     public static final DeferredItem<Item> PURGE_SHOT = ITEMS.register("purge_shot", () -> new PurgeShot(new Item.Properties().stacksTo(16)));
     public static final DeferredItem<Item> ANDROID_EGG = ITEMS.register("android_spawn_egg",
             () -> new DeferredSpawnEggItem(ANDROID, 0xB8C0C8, 0xE02030, new Item.Properties()));
-    public static final Supplier<SoundEvent> ALERT = sound("alert"), GLITCH = sound("glitch");
+    public static final Supplier<SoundEvent> ALERT = sound("alert"), GLITCH = sound("glitch"), OVERRIDE = sound("override");
 
     public static final Supplier<AttachmentType<Float>> INFECTION = ATTACHMENTS.register("infection",
             () -> AttachmentType.builder(() -> 0f).serialize(Codec.FLOAT).build());
@@ -334,6 +334,7 @@ public final class Invasion {
         d.startDay = day(server.overworld());
         d.setDirty();
         List<ServerPlayer> players = server.overworld().players();
+        theme(players);
         if (!players.isEmpty()) {
             ServerPlayer p = players.get(server.overworld().random.nextInt(players.size()));
             Android unit = spawnNear(server.overworld(), p, 40, 56);
@@ -342,6 +343,12 @@ public final class Invasion {
                 unit.setCustomName(Component.literal(glitch("UNIT-0")).withStyle(ChatFormatting.DARK_RED));
             }
         }
+    }
+
+    /** "Override", the invasion theme (our own music): in the music/jukebox volume slider ("Jukebox/Note Blocks"). */
+    static void theme(List<ServerPlayer> players) {
+        if (!InvasionConfig.MUSIC.get()) return;
+        for (ServerPlayer p : players) p.playNotifySound(OVERRIDE.get(), SoundSource.RECORDS, 0.8f, 1);
     }
 
     /** An android on the surface 'min'..'max' blocks from this player. */
@@ -368,6 +375,7 @@ public final class Invasion {
         // Every night after the breach, more androids come: 2 on the first night, one more each night.
         long t = world.getDayTime() % 24000;
         if (t < 13000 || t > 23000) return;
+        if (t < 13600) theme(world.players()); // nightfall: the music comes back with them
         int cap = (int) Math.min(InvasionConfig.MAX_ANDROIDS.get(), 2 + Math.max(0, day(world) - d.startDay));
         for (ServerPlayer p : world.players()) {
             if (p.isSpectator() || corrupted(p)) continue;
