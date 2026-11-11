@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "facing=north,screen=0": {
+      "model": "chromeflesh_invasion:block/tv_off",
+      "y": 0
+    },
+    "facing=north,screen=1": {
+      "model": "chromeflesh_invasion:block/tv_static",
+      "y": 0
+    },
+    "facing=north,screen=2": {
+      "model": "chromeflesh_invasion:block/tv_alert",
+      "y": 0
+    },
+    "facing=east,screen=0": {
+      "model": "chromeflesh_invasion:block/tv_off",
+      "y": 90
+    },
+    "facing=east,screen=1": {
+      "model": "chromeflesh_invasion:block/tv_static",
+      "y": 90
+    },
+    "facing=east,screen=2": {
+      "model": "chromeflesh_invasion:block/tv_alert",
+      "y": 90
+    },
+    "facing=south,screen=0": {
+      "model": "chromeflesh_invasion:block/tv_off",
+      "y": 180
+    },
+    "facing=south,screen=1": {
+      "model": "chromeflesh_invasion:block/tv_static",
+      "y": 180
+    },
+    "facing=south,screen=2": {
+      "model": "chromeflesh_invasion:block/tv_alert",
+      "y": 180
+    },
+    "facing=west,screen=0": {
+      "model": "chromeflesh_invasion:block/tv_off",
+      "y": 270
+    },
+    "facing=west,screen=1": {
+      "model": "chromeflesh_invasion:block/tv_static",
+      "y": 270
+    },
+    "facing=west,screen=2": {
+      "model": "chromeflesh_invasion:block/tv_alert",
+      "y": 270
+    }
+  }
+}

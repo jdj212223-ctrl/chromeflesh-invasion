@@ -1,0 +1,14 @@
+{
+  "alert": {
+    "sounds": [
+      "chromeflesh_invasion:alert"
+    ],
+    "subtitle": "subtitles.chromeflesh_invasion.alert"
+  },
+  "glitch": {
+    "sounds": [
+      "chromeflesh_invasion:glitch"
+    ],
+    "subtitle": "subtitles.chromeflesh_invasion.glitch"
+  }
+}
